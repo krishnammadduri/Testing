@@ -1,14 +1,21 @@
 <?xml version="1.0"?>
    <project name="Hello World Project" default="info">
+<property name="lib-dir" value="lib"/>
    
    <target name="info">
       <echo>Hello World - Welcome to Apache Ant!</echo>
    </target>
 
+ <path id="master-classpath">
+      <fileset dir="${basedir}/lib">
+         <include name="*.jar"/>
+      </fileset>
+</path>
 
 <taskdef
     name="jmeter"
-    classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
+    classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"
+    classpath= "master-classpath"/>
 
 <jmeter
     jmeterhome="/home/krmadduri/apache-jmeter-2.12"
