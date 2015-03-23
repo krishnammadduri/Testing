@@ -15,7 +15,7 @@
 <taskdef
     name="jmeter"
     classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"
-    classpath= "master-classpath"/>
+    classpath="${basedir}/lib/ant-jmeter-1.1.1.jar"/>
 
 <jmeter
     jmeterhome="/home/krmadduri/apache-jmeter-2.12"
