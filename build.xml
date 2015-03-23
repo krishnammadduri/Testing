@@ -1,17 +1,7 @@
 <?xml version="1.0"?>
-   <project name="Hello World Project" default="info">
+   <project name="Hello World Project">
 <property name="lib-dir" value="lib"/>
    
-   <target name="info">
-      <echo>Hello World - Welcome to Apache Ant!</echo>
-   </target>
-
- <path id="master-classpath">
-      <fileset dir="${basedir}/lib">
-         <include name="*.jar"/>
-      </fileset>
-</path>
-
 <taskdef
     name="jmeter"
     classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"
@@ -19,7 +9,7 @@
 
 <jmeter
     jmeterhome="/home/krmadduri/apache-jmeter-2.12"
-    testplan="${basedir}/testing.jmx"
+    testplan="${basedir}/loadTests/jenkins.jmx"
     resultlog="${basedir}/JMeterResults.jtl"/>
    
 </project>
