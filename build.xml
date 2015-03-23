@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+   <project name="Hello World Project" default="info">
+   
+   <target name="info">
+      <echo>Hello World - Welcome to Apache Ant!</echo>
+   </target>
+
+
+<taskdef
+    name="jmeter"
+    classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
+
+<jmeter
+    jmeterhome="/home/krmadduri/apache-jmeter-2.12"
+    testplan="${basedir}/testing.jmx"
+    resultlog="${basedir}/JMeterResults.jtl"/>
+   
+</project>
