@@ -31,6 +31,10 @@
                                 <ignoreResultFailures>true</ignoreResultFailures>
 				<suppressJMeterOutput>false</suppressJMeterOutput>
                                 <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
+                                 <junitReport>true</junitReport>
+                        <exportwAll>true</exportwAll>
+                        <printReport>true</printReport>
+                        <testFailIgnore>true</testFailIgnore>
                             </configuration> 
                         </execution>
                     </executions>
