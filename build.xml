@@ -11,9 +11,6 @@
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
     testplan="${basedir}/loadTests/jenkins.jmx"
     resultlog="${basedir}/loadTests/JMeterResults.jtl"/>
-    <jvmarg value="-Xincgc"/>
-    <jvmarg value="-Xmx128m"/>
-    <jvmarg value="-Dproperty=value"/>
 
 <xslt
     in="${basedir}/loadtests/JMeterResults.jtl"
