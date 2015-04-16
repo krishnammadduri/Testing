@@ -10,17 +10,15 @@
 <jmeter
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
     testplan="${basedir}/loadTests/jenkins.jmx"
-    resultlog="${basedir}/loadTests/jmeter-results-report.xsl"/>
-    
-<target name="report" depends="_message_xalan">
-  <xslt
-    classpathref="xslt.classpath"
-    force="true"
-      in="${testpath}/${test}.jtl"
-      out="${testpath}/${test}.html"
-      style="${basedir}/jmeter-results-shanhe-me.xsl">
-    <param name="showData" expression="${show-data}"/>
-  </xslt>
-</target>
+    resultlog="${basedir}/loadTests/JMeterResults.jtl"/>
+    <jvmarg value="-Xincgc"/>
+    <jvmarg value="-Xmx128m"/>
+    <jvmarg value="-Dproperty=value"/>
+</jmeter>
+
+<xslt
+    in="${basedir}/loadtests/JMeterResults.jtl"
+    out="${basedir}/loadtests/JMeterResults.html"
+    style="${basedir}/loadtests/jmeter-results-report.xsl"/>
 
 </project>
