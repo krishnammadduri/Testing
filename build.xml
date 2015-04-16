@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-   <project name="Hello World Project">
+   <project name="Jenkins/Jmeter POC">
 <property name="lib-dir" value="lib"/>
    
 <taskdef
@@ -10,11 +10,6 @@
 <jmeter
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
     testplan="${basedir}/loadTests/jenkins.jmx"
-    resultlog="${basedir}/loadTests/JMeterResults.jtl"/>
-
-<xslt
-    in="${basedir}/loadTests/JMeterResults.jtl"
-    out="${basedir}/loadTests/JMeterResults.html"
-    style="${basedir}/loadTests/jmeter-results-report.xsl"/>
+    resultlog="${basedir}/JMeterResults.jtl"/>  
 
 </project>
