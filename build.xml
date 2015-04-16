@@ -11,5 +11,10 @@
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
     testplan="${basedir}/loadTests/jenkins.jmx"
     resultlog="${basedir}/JMeterResults.jtl"/>
+    
+<xslt
+    in="${basedir}/loadtests/JMeterResults.jtl"
+    out="${basedir}/loadtests/JMeterResults.html"
+    style="${basedir}/loadtests/jmeter-results-report.xsl"/>
    
 </project>
