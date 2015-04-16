@@ -12,9 +12,15 @@
     testplan="${basedir}/loadTests/jenkins.jmx"
     resultlog="${basedir}/loadTests/jmeter-results-report.xsl"/>
     
-<xslt
-    in="${basedir}/loadTests/JMeterResults.jtl"
-    out="${basedir}/loadTests/JMeterResults.html"
-    style="${basedir}/loadTests/jmeter-results-report.xsl"/>
+<target name="report" depends="_message_xalan">
+  <xslt
+    classpathref="xslt.classpath"
+    force="true"
+      in="${testpath}/${test}.jtl"
+      out="${testpath}/${test}.html"
+      style="${basedir}/jmeter-results-shanhe-me.xsl">
+    <param name="showData" expression="${show-data}"/>
+  </xslt>
+</target>
 
 </project>
