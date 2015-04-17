@@ -9,8 +9,12 @@
 
 <jmeter
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
-    resultlog="${basedir}/JMeterResults.html"> 
+    resultlog="${basedir}/loadTests/JMeterResults.jtl"> 
    <testplans dir="${basedir}/loadTests" includes="*.jmx"/>
 </jmeter>
 
+<xslt
+    in="${basedir}/loadTests/JMeterResults.jtl"
+    out="${basedir}/loadTests/JMeterResults.html"/>
+    
 </project>
