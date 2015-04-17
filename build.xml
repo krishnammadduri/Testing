@@ -13,4 +13,9 @@
    <testplans dir="${basedir}/loadTests" includes="*.jmx"/>
 </jmeter>
 
+<xslt
+    in="${basedir}/loadTests/JMeterResults.jtl"
+    out="${basedir}/loadTests/JMeterResults.html"
+    style="${basedir}/loadTests/jmeter-results-report.xsl"/>
+
 </project>
