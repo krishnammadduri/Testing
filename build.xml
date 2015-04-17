@@ -9,13 +9,13 @@
 
 <jmeter
     jmeterhome="/home/krishnam/apache-jmeter-2.12"
-    resultlog="${basedir}/loadTests/JMeterResults.jtl"> 
+    resultlog="${basedir}/loadTests/POC.jtl"> 
    <testplans dir="${basedir}/loadTests" includes="*.jmx"/>
 </jmeter>
 
 <xslt
-    in="${basedir}/loadTests/JMeterResults.jtl"
-    out="${basedir}/loadTests/JMeterResults.html"
+    in="${basedir}/loadTests/POC.jtl"
+    out="${basedir}/loadTests/POC.html"
     style="${basedir}/loadTests/jmeter-results-report.xsl"/>
     
 </project>
