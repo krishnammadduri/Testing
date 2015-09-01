@@ -95,7 +95,7 @@
 		<jmeter
 		    jmeterhome="${jmeter.home}"
 		    testplan ="${testpath}/${test}.jmx"
-		    resultlog="${testpath}/${test}_${report.datestamp}.jtl">
+		    resultlog="${testpath}/${test}.jtl">
 		<!--
 			<jvmarg value="-Xincgc"/>
 			<jvmarg value="-Xmx128m"/>
@@ -128,8 +128,8 @@
 		<xslt
 			classpathref="xslt.classpath"
 			force="true"
-		    in="${testpath}/${test}_${report.datestamp}.jtl"
-		    out="${testpath}/${test}_${report.datestamp}.html"
+		    in="${testpath}/${test}.jtl"
+		    out="${testpath}/${test}.html"
 		    style="${basedir}/jmeter-results-detail-report${style_version}.xsl">
 			<param name="showData" expression="${show-data}"/>
 			<param name="titleReport" expression="${report.title}"/>
