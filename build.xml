@@ -68,7 +68,7 @@
 		<equals arg1="${show-data}" arg2="y"/>
 	</condition>
 	
-	<condition property="funcMode" value="false">
+	<condition property="funcMode" value="true">
 	  <not>
 		<equals arg1="${show-data}" arg2="y"/>
 	  </not>
