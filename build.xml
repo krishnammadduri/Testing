@@ -91,7 +91,7 @@
 
 	<target name="run">
 		<echo>funcMode = ${funcMode}</echo>
-		<delete file="${testpath}/${test}.html">
+		<delete file="${testpath}/${test}.html"/>
 		<jmeter
 		    jmeterhome="${jmeter.home}"
 		    testplan ="${testpath}/${test}.jmx"
