@@ -68,7 +68,7 @@
 		<equals arg1="${show-data}" arg2="y"/>
 	</condition>
 	
-	<condition property="funcMode" value="true">
+	<condition property="funcMode" value="false">
 	  <not>
 		<equals arg1="${show-data}" arg2="y"/>
 	  </not>
@@ -91,7 +91,7 @@
 
 	<target name="run">
 		<echo>funcMode = ${funcMode}</echo>
-		<delete file="${testpath}/${test}.html"/>
+		<delete file="${testpath}/${test}.html">
 		<jmeter
 		    jmeterhome="${jmeter.home}"
 		    testplan ="${testpath}/${test}.jmx"
