@@ -10,6 +10,7 @@
 <jmeter
     jmeterhome="/home/krmadduri/apache-jmeter-2.12"
     resultlog="${basedir}/jmeterresults.jtl"/>
-    <testplans dir="${basedir}/loadtests" includes="*.jmx"/>    
+    <testplans dir="${basedir}/loadtests" includes="*.jmx"/>   
+</jmeter>     
    
-</project>
+
