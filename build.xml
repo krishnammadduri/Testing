@@ -140,8 +140,8 @@
 
     <!-- Copy report images if needed -->
     <target name="copy-images" depends="verify-images" unless="samepath">
-        <copy file="${basedir}/expand.png" tofile="${testpath}/expand.png"/>
-        <copy file="${basedir}/collapse.png" tofile="${testpath}/collapse.png"/>
+        <copy file="${basedir}/expand.jpg" tofile="${testpath}/expand.jpg"/>
+        <copy file="${basedir}/collapse.jpg" tofile="${testpath}/collapse.jpg"/>
     </target>
 
     <target name="verify-images">
