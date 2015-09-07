@@ -49,7 +49,13 @@
 	<property name="report.title" value="Load Test Results"/>
 		
 	<!-- Name of test (without .jmx) -->
-	<property name="test" value="/loadTests" includes="*.jmx"/>
+	  <path id="jmeter.classpath">
+        <fileset dir="${user.dir}">
+          <include name="loadTests/*.jmx"/>
+        </fileset>
+    </path>     
+    <property name="test" value="/loadTests/name"/>
+<!--	<property name="test" value="/loadTests" includes="*.jmx"/> -->
 		
 	<!-- Should report include response data for failures? -->
 	<property name="show-data" value="n"/>
