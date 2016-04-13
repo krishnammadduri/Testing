@@ -49,7 +49,7 @@
 	<property name="report.title" value="Load Test Results"/>
 		
 	<!-- Name of test (without .jmx) -->
-	<property name="test" value="/loadTests/prod Sanity"/>
+	<property name="test" value="/loadTests/Sanity"/>
 	
 	<!-- Should report include response data for failures? -->
 	<property name="show-data" value="n"/>
